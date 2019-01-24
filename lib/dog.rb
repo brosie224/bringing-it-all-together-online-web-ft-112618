@@ -50,8 +50,8 @@ attr_reader :id
 
   def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ?"
-    DB[:conn].execute(sql, id)
-  end.first
+    DB[:conn].execute(sql, id)[0]
+  end
 
   def self.new_from_db(row)
     new_dog = Dog.new(row[0], row[1], row[2])
