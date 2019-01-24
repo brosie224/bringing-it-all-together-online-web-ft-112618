@@ -41,13 +41,13 @@ attr_reader :id
     end
     self
   end
-  #
-  # def self.create(name, grade)
-  #   new_student = Student.new(name, grade)
-  #   new_student.save
-  #   new_student
-  # end
-  #
+  
+  def self.create(name, breed)
+    new_dog = Dog.new(name, breed)
+    new_dog.save
+    new_dog
+  end
+  
   def self.new_from_db(row)
     new_dog = Dog.new(row[0], row[1], row[2])
     new_dog
