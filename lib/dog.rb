@@ -19,4 +19,8 @@ attr_reader :id
     SQL
     DB[:conn].execute(sql)
   end
+
+
+
+
 end
